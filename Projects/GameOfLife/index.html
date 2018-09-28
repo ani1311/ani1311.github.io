@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
+    <style> body {padding: 0; margin: 0;} </style>
+    <script src="../p5/p5.min.js"></script>
+    <script src="../p5/addons/p5.dom.min.js"></script>
+    <script src="../p5/addons/p5.sound.min.js"></script>
+    <script src="sketch.js"></script>
+    <script src="board.js"></script>
+  </head>
+  <body>
+
+    <div class="background">
+      
+      <div class="container">
+        <div class="jumbotron">
+          <h1>Game Of Life</h1> 
+          <p>A basic implimentation of the Game of Life, also known simply as Life,a cellular automaton devised by the British mathematician John Horton Conway in 1970.</p> 
+        </div>
+
+        <div class = "sketch" id="sketch-holder">
+          <!-- Our sketch will go here! -->
+        </div>
+        
+      <div class="jumbotron">
+        <h1><center>Controls</center></h1> 
+        <p>Left Arrow - Run automata</p> 
+        <p>Click on cell to make Alive</p> 
+      </div>
+      
+    </div>
+  </body>
+</html>
