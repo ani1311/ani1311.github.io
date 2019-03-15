@@ -6,6 +6,13 @@ function Grid()
 	this.area = [];
 	this.side = 40;
 	this.no = width/this.side;
+	this.horizontalLines = [];
+	for(var i = 0 ; i < this.no ; i++)
+	{
+		this.horizontalLines[this.horizontalLines.length] = false;
+	}
+	// this.points = [[3,3],[3,12],[9,12],[9,3]];
+	this.points = [];
 
 	for(var i = 0 ; i < this.no ; i++)
 	{
@@ -47,6 +54,14 @@ function Grid()
 		}
 	}
 
+	this.addPoint = function(x,y)
+	{
+		t = this.getIJ(x,y);
+		this.points[this.points.length] = [t[0],t[1]];
+		this.area[t[0]][t[1]] = 1; 
+	}
+
+
 	this.fillTile = function(i,j)
 	{
 		this.area[i][j] = 1;
@@ -62,34 +77,87 @@ function Grid()
 			}
 		}
 	}
+
+	this.makeLines = function()
+	{
+		for(var i = 0 ; i < this.points.length - 1; i++)
+		{
+			var x0 = this.points[i][0];
+			var y0 = this.points[i][1];
+			var x1 = this.points[i + 1][0];
+			var y1 = this.points[i + 1][1];
+
+			var dx = x1 - x0;
+			var dy = y1 - y0;
+
+			var step = max(abs(dx),abs(dy));
+			print(step);
+			var xStep = dx/step;
+			var yStep = dy/step;
+
+			print(step);
+
+			if(dx == 0)
+			{
+				this.horizontalLines[this.points[i][1]] = true;
+			}
+
+			x = x0;
+			y = y0;
+
+			for(var j = 0 ; j <= step ; j++)
+			{
+				this.area[round(x)][round(y)] = 1;
+				x = x + xStep;
+				y = y + yStep;
+			}
+		}
+
+		var x0 = this.points[this.points.length - 1][0];
+		var y0 = this.points[this.points.length - 1][1];
+		var x1 = this.points[0][0];
+		var y1 = this.points[0][1];
+
+		var dx = x1 - x0;
+		var dy = y1 - y0;
+
+		var step = max(abs(dx),abs(dy));
+		var xStep = dx/step;
+		var yStep = dy/step;
+
+		print(step);
+
+		if(dx == 0)
+		{
+			this.horizontalLines[this.points[i][1]] = true;
+		}
+
+		x = x0;
+		y = y0;
+
+		for(var j = 0 ; j <= step ; j++)
+		{
+			this.area[round(x)][round(y)] = 1;
+			x = x + xStep;
+			y = y + yStep;
+		}
+
+
+	}
+
 }
 
-function scanLineStep(pos,grid,flag)
-{
-	i = pos[0];
-	j = pos[1];
 
-	if(i + 1 == grid.no)
+
+function round(x)
+{
+	if(x <= 0.5)
 	{
-		i = 0;
-		j = j + 1;
+		return int(x);
 	}
 	else
 	{
-		i = i + 1;
+		return (int(x) + 1);
 	}
-
-	if(grid.area[i][j] == 0 && flag)
-	{
-		grid.area[i][j] = 1;	
-	}
-
-	else if(grid.area[i][j] == 1)
-	{
-		flag = !flag;
-	}
-
-	pos[0] = i;
-	pos[1] = j;
 }
 

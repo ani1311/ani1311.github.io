@@ -13,7 +13,7 @@ function setup()
 
 	grid = new Grid();
 
-	frameRate(5);
+	frameRate(10);
 }
 
 
@@ -28,7 +28,7 @@ function draw()
 	// noLoop();
 	if(filling)
 	{
-		scanLineStep(scanLineStart,grid,slFlag);
+		scanLineStep(scanLineStart,grid);
 	}
 }
 
@@ -38,9 +38,9 @@ function keyPressed()
 	{
 		filling = !filling;
 	}
-	if(keyCode == 66)      // 66 == b
+	if(keyCode == 66)      // 65 == a
 	{
-		graph.moveNode(movementIndex);
+		grid.makeLines();
 	}
 	if(keyCode == 67)      // 78 == c
 	{
@@ -50,15 +50,10 @@ function keyPressed()
 
 function mousePressed()
 {
-	t = grid.getIJ(mouseX,mouseY);
-	grid.fillTile(t[0],t[1]);
+	grid.addPoint(mouseX,mouseY);
+	print(grid.getIJ(mouseX,mouseY));
 }
 
-function mouseDragged()
-{
-	t = grid.getIJ(mouseX,mouseY);
-	grid.fillTile(t[0],t[1]);	
-}
 
 
 
@@ -76,18 +71,37 @@ function mouseDragged()
 
 
 //---------FUNCTIONS-----------///
-function coordToGP(t)
+function scanLineStep(pos,grid)
 {
-	X = t[0] + width/2;
-	Y = -t[1] + height/2;
-	return [X,Y];
-}
+	i = pos[0];
+	j = pos[1];
 
-function GPToCoord(t)
-{
-	X = t[0] - width/2;
-	Y = t[1] - height/2;
-	return [X,-Y];
+	if(i + 1 == grid.no)
+	{
+		i = 0;
+		j = j + 1;
+		if(grid.horizontalLines[j] == true)
+		{
+			j = j + 1;
+		}
+	}
+	else
+	{
+		i = i + 1;
+	}
+
+	if(grid.area[i][j] == 0 && slFlag)
+	{
+		grid.area[i][j] = 1;
+	}	
+
+	else if(grid.area[i][j] == 1)
+	{
+		slFlag = !slFlag;
+	}
+
+	pos[0] = i;
+	pos[1] = j;
 }
 
 
