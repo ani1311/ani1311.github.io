@@ -1,1 +1,5 @@
-# List of posts 
+---
+layout: post
+title: List of posts
+---
+
