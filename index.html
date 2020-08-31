@@ -1,114 +1,24 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Aniket Alur</title>
-	<link rel="shortcut icon" href="images/title.ico" />
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-</head>
-<body>
-	<div class = "background">
-		<div class = "nav">
-			<a class = "a active" href=#">HOME</a>
-			<a class = "b" href=#">ABOUT ME</a>
-			<a class = "c" href=#">PROJECTS</a>
-			<a class = "d" href=#">CONTACT</a>
-		</div>
-
-		<div class="content">
-			
-			<div class="home">
-				<h1>Hey, I am Aniket Alur</h1>
-				<h3></h3>
-			</div>
-
-			<div class="aboutme">
-				<p>
-					<b>Hello World</b><br>
-				</p>
-				<p>
-					I am a third year student at RCOEM doing my undergrad in Information Technology.
-				</p>
-			</div>
-
-			<div class = "projects">
-				<div class="image">
-					<a href="Projects/mineSweeper/index.html" target="_blank"><img src="images/MineSweeper.png"/></a>
-					<a href="Projects/GameOfLife/index.html" target="_blank"><img src="images/GameOfLife.png"/></a>
-					<a href="Projects/MazeSolver/index.html" target="_blank"><img src="images/MazeSolver.png"/></a>
-					<a href="Projects/Percpetron/index.html" target="_blank""><img src="images/Perceptron.png"/></a>
-					<a href="Projects/SnakeGame/index.html" target="_blank"><img src="images/SnakeGame.png"/></a>
-					<a href="Projects/Starlight/index.html" target="_blank"><img src="images/Starlight.png"/></a>
-					<a href="Projects/SimpleHarmonicMotion/index.html" target="_blank"><img src="images/SimpleHarmonicMotion.png"/></a>
-					<a href="Projects/SmoothAccleration/index.html" target="_blank"><img src="images/SmoothAccleration.png"/></a>
-
-					
-				</div>
-			</div>
-
-			<div class="contact">
-				<p>
-					<b>email - aluram@rknec.edu</b>
-				</p>
-			</div>
-			
-		</div>
-	</div>
-
-<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-<script type="text/javascript">
-	
-	$(document).ready(function(){
-		$('a').click(function(){
-			// alert("i am clicked");
-			var selected = $(this);
-			$('a').removeClass('. active');
-			$(selected).addClass('active');
-		});
-	
-
-		var $a = $('.a'),
-		$b = $('.b'),
-		$c = $('.c'),
-		$d = $('.d'),
-		$home = $('.home'),
-		$aboutme = $('.aboutme'),
-		$projects = $('.projects'),
-		$contact = $('.contact');
-
-		$a.click(function(){
-			$home.fadeIn();
-			$aboutme.fadeOut();
-			$projects.fadeOut();
-			$contact.fadeOut();
-		});
-
-		$b.click(function(){
-			$home.fadeOut();
-			$aboutme.fadeIn();
-			$projects.fadeOut();
-			$contact.fadeOut();
-		});
-
-		$c.click(function(){
-			$home.fadeOut();
-			$aboutme.fadeOut();
-			$projects.fadeIn();
-			$contact.fadeOut();
-		});
-
-		$d.click(function(){
-			$home.fadeOut();
-			$aboutme.fadeOut();
-			$projects.fadeOut();
-			$contact.fadeIn();
-		});
-
-
-	});
-
-</script>
-
-
-
-</body>
+  <head>
+    <style>
+      .button {
+        background-color: #1c87c9;
+        border: none;
+        color: white;
+        padding: 20px 34px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+      <h1> Comming SOON .In Development.</h1>
+    <a href="oldWebsite.html" class="button">old website</a>
+    <a href="blog.html" class="button">blog</a>
+  </body>
 </html>
