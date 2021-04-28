@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <style>
-      .button {
-        background-color: #1c87c9;
-        border: none;
-        color: white;
-        padding: 20px 34px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 20px;
-        margin: 4px 2px;
-        cursor: pointer;
-      }
-    </style>
-  </head>
-  <body>
-      <h1> Comming SOON .In Development.</h1>
-    <a href="Projects/oldWebsite.html" class="button">old website</a>
-    <a href="blog/index.md" class="button">blog</a>
-  </body>
+  <script type="text/javascript">
+    var fso = new ActiveXObject("Scripting.FileSystemObject");
+
+    function showFolderFileList(folderspec) {
+        var s = "";
+        var f = fso.GetFolder(folderspec);
+
+        // recurse subfolders
+        var subfolders = new Enumerator(f.SubFolders);
+        for(; !subfolders.atEnd(); subfolders.moveNext()) {
+            s += ShowFolderFileList((subfolders.item()).path);
+        }
+
+        // display all file path names.
+        var fc = new Enumerator(f.files);
+        for (; !fc.atEnd(); fc.moveNext()) {
+            s += fc.item() + "<br>";
+        }
+        return s;
+    }
+
+    function listFiles() {
+        document.getElementById('files').innerHTML = showFolderFileList('.');
+    }
+</script>
+<input type='button' onclick='listFiles()' value='List Files' />
+<div id="files" />
 </html>
