@@ -1,4 +1,5 @@
-baseURL = "https://ani1311.github.io/blog/public"
+baseURL = "https://ani1311.github.io"
 languageCode = "en-us"
 title = "My New Hugo Site"
-theme = "solar"
+publishdir = ".."
+theme = "dimension"
