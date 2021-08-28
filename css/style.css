@@ -10,6 +10,28 @@ html,body{
 	font-weight: normal;
 }
 
+h1 {
+	margin-top: 20px;
+	margin-bottom: 40px;
+}
+
+h2 {
+	margin-left: 5%;
+	padding-bottom: 2%;
+	background-color: rgb(46, 27, 27);
+}
+
+
+p {
+	margin-left: 5%;
+	font-size: 18px;
+}
+
+.intro-body {
+	background-color: rgb(0, 0, 0);
+	color: white;
+}
+
 .title {
 	margin-bottom: 30px;
 }
