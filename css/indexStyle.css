@@ -8,6 +8,7 @@ body {
 	color: #fff;
 	font-family: arial;
 	background: #000 url('images/background.gif') fixed;
+	/* padding-bottom: 200px; */
 }
 
 .nav {
@@ -142,15 +143,7 @@ body {
 }
 
 .footer {
-	clear: both;
-	text-align: center;
-	padding-top: 0px;
-	width: 100%;
-	padding: 5px 0;
-	border-top: 1px solid #555;
-	background: #000;
-	margin-top: -20px;
-	margin-top: 0px;
+	border-bottom-width: 20px;
 }
 
 a {
