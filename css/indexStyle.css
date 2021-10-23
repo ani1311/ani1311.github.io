@@ -8,7 +8,7 @@ body {
 	color: #fff;
 	font-family: arial;
 	background: #000 url('images/background.gif') fixed;
-	/* padding-bottom: 200px; */
+	padding-bottom: 200px;
 }
 
 .nav {
