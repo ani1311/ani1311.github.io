@@ -125,8 +125,6 @@ body {
 	list-style: none;
 }
 
-.links li {
-}
 
 .links li a {
 	text-decoration: none;
@@ -152,7 +150,7 @@ body {
 	border-top: 1px solid #555;
 	background: #000;
 	margin-top: -20px;
-	//margin-top: 0px;
+	margin-top: 0px;
 }
 
 a {
