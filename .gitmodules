@@ -1,3 +1,21 @@
 [submodule "blog/themes/solar"]
 	path = blog/themes/solar
 	url = https://github.com/bake/solar-theme-hugo
+[submodule "blog/themes/ink-free"]
+	path = blog/themes/ink-free
+	url = https://github.com/chollinger93/ink-free
+[submodule "blog/themes/minima"]
+	path = blog/themes/minima
+	url = https://github.com/mivinci/hugo-theme-minima.git
+[submodule "blog/themes/hugo-theme-minima"]
+	path = blog/themes/hugo-theme-minima
+	url = https://github.com/Mivinci/hugo-theme-minima
+[submodule "blog/blog/themes/minima"]
+	path = blog/blog/themes/minima
+	url = https://github.com/mivinci/hugo-theme-minima.git
+[submodule "blog/blog/themes/ananke"]
+	path = blog/blog/themes/ananke
+	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
+[submodule "blog/blog/themes/themes/minima"]
+	path = blog/blog/themes/themes/minima
+	url = https://github.com/mivinci/hugo-theme-minima.git
