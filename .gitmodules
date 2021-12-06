@@ -19,3 +19,6 @@
 [submodule "blog/blog/themes/themes/minima"]
 	path = blog/blog/themes/themes/minima
 	url = https://github.com/mivinci/hugo-theme-minima.git
+[submodule "blog/blog/themes/hugo-classic"]
+	path = blog/blog/themes/hugo-classic
+	url = https://github.com/goodroot/hugo-classic
