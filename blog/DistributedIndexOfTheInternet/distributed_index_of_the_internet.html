@@ -44,12 +44,9 @@
 
                 <h2> The Idea:</h2>
 
-                A network where each node explores/updates some part of the internet. These nodes run crawllers and
-                store the result of these crawllers, i.e some portion of the indexes of the internet on their network
-                storage.
-                <br>
-                Now it is not possible to have the entire index of the internet stored on each node. So we can have a
-                merkle tree like structure that each node stores and this structure is updated at each run of the node.
+                A network where each node explores/updates some part of the internet. And each node can have a list of
+                websites it tracks.<br>
+                These nodes run crawllers and store the result of these crawllers.
 
                 <br>
                 <br>
@@ -57,21 +54,53 @@
                 <h3> Why do this?</h3>
                 Well, for starters, if I want to scrape the web for data, this would be a fantastic resource. But more
                 importantly, I don't know how or where someone might come up with an application that uses this API. But
-                an index of the Internet sounds like a good resource.
+                a publicly available index of the Internet should have been a resource available years ago.
+                <br>
 
                 In addition, if someone can build a good parser, identifier, then this can server as a great tool to
                 build new pages. We have hackerNews, but this might help build AritstNews or paleontologistNews.
 
                 We can build systems to categorize websites, build niche specific search engines.
 
-                <!-- <br> -->
-                <!-- <br> -->
-                <!-- This decentralized (Tree) index of the internet will be open to all, to explore websites, -->
-                <!-- links.. Maybe -->
-                <!-- someone writes a opensource pagerank and uses it on our index to build a search engine. Maybe -->
-                <!-- someone -->
-                <!-- trains -->
-                <!-- GPT4 on the pages of this index. -->
+                <br>
+                <br>
+                <br>
+
+                <h2> How?</h2>
+
+                <h3> The Crawller:</h3>
+                This is the main compute that will run on each node.
+                <br>
+                <a href="https://github.com/ani1311/Spider">Spider in golang</a>
+                <br>
+                <br>
+                <h3> The Database</h3>
+                What we need to store. Consider that there is a node that is the root of each domain. Now this root will
+                have a tree of all the pages in that domain. But any node in this tree may also be refered by a node in
+                some other tree outside the domain. This way, the web forms a graph, and we need a structure to store
+                this graph.
+
+                A complete index of the internet containing links to the pages of most(Possibly every website) will have
+                a size in the order of terabytes. This can not be feasible stored in every node. We need the data base
+                to have the following properties:<br>
+                -> It must be mutable by any node in the network.
+
+                <br>
+                <br>
+
+                We can use <a href="https://ipfs.io/">IPFS</a> to store the base DB. This distributes the data over
+                multiple IPFS nodes ensuring the
+                integrity of the entire store.
+                <br>
+
+
+                <br>
+                <br>
+
+                <h2> Who will run these nodes?</h2>
+                If I want my website to be in the index, I will somehow run the node, either by paying or running my own
+                node(TBD)
+
             </div>
         </div>
 
