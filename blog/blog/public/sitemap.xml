@@ -3,26 +3,26 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/blog/blog/public/</loc>
+    <loc>/</loc>
     <lastmod>2021-12-06T15:17:23-06:00</lastmod>
   </url>
   
   <url>
-    <loc>/blog/blog/public/posts/parametric-equations-unity/</loc>
+    <loc>/posts/parametric-equations-unity/</loc>
     <lastmod>2021-12-06T15:17:23-06:00</lastmod>
   </url>
   
   <url>
-    <loc>/blog/blog/public/posts/</loc>
+    <loc>/posts/</loc>
     <lastmod>2021-12-06T15:17:23-06:00</lastmod>
   </url>
   
   <url>
-    <loc>/blog/blog/public/categories/</loc>
+    <loc>/categories/</loc>
   </url>
   
   <url>
-    <loc>/blog/blog/public/tags/</loc>
+    <loc>/tags/</loc>
   </url>
   
 </urlset>
