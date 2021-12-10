@@ -1,5 +1,5 @@
-/* Light mode */
-@media (prefers-color-scheme: light) {
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
     body {
         background-color: #393E41;
         color: white;
@@ -36,8 +36,8 @@
 }
 
 
-/* Dark mode */
-@media (prefers-color-scheme: dark) {
+/* Light mode */
+@media (prefers-color-scheme: light) {
     blockquote {
       background: #f9f9f9;
     }
