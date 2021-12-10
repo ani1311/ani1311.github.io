@@ -1,7 +1,7 @@
 var navBarHtml = `
 <ul>
     <li><a href="/">Home</a></li>
-    <li><a href="/blog/blog/public/index.html">Blog</a></li>
+    <li><a href="/blog.html">Blog</a></li>
     <li><a href="/projects.html">Projects</a></li>
     <li><a href="/contactMe.html">Contact Me</a></li>
     <li><a href="/Resume.pdf">Resume</a></li>
