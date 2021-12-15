@@ -31,41 +31,43 @@
         <div class="blogcolorbox">
             <div class="blogtextbox">
 
-                Okay, what is the internet? essentially just a big graph of webpages. So is there be an easy way to
-                see the entier internet. Now there are two challenges in this.
+                Why isn't the DB of Google public? It is essentially a graph of the internet, with a lot of metadata for
+                each page. In other works it is Google's interpretation of the web.
                 <br>
                 <br>
-
+                The only way for a user to access it is via a small and extremely difficult-to-use API called Google
+                search.
+                <br>
+                <br>
+                Imagine you write a book containing all the information of humanity but you keep this book private. The
+                only way you can access this book is by asking questions about the book. But you can't actually open a
+                page in the book and see for yourself. Isn't that a ridiculously complicated way to read a book? And
+                image this book is essentially the one (assumed) source of truth for almost the entire mankind.
+                <br>
+                <br>
+                The obvious solution is just to make the book public. So let's try to make a public graph of the
+                internet. This creates an entirely public DB of the internet that is accessible to all. Now anyone with
+                the know-how can read the book and critique it.
+                <br>
+                <br>
+                That is my thought behind building a public index of the internet. Now I understand this is no easy
+                challenge, but I believe it's a crucial one to make a more public and transparent internet.
+                <br>
+                <br>
+                Now there are two challenges in this.
+                <br>
+                <br>
                 => Who will run all that compute of crawllers.<br>
                 => Where to store graph.
-
                 <br>
                 <br>
-
                 <h2> The Idea:</h2>
 
                 A network where each node explores/updates some part of the internet. And each node can have a list of
                 websites it tracks.<br>
                 These nodes run crawllers and store the result of these crawllers.
-
                 <br>
                 <br>
-
-                <h3> Why do this?</h3>
-                Well, for starters, if I want to scrape the web for data, this would be a fantastic resource. But more
-                importantly, I don't know how or where someone might come up with an application that uses this API. But
-                a publicly available index of the Internet should have been a resource available years ago.
-                <br>
-
-                In addition, if someone can build a good parser, identifier, then this can server as a great tool to
-                build new pages. We have hackerNews, but this might help build AritstNews or paleontologistNews.
-
-                We can build systems to categorize websites, build niche specific search engines.
-
-                <br>
-                <br>
-                <br>
-
                 <h2> How?</h2>
 
                 <h3> The Crawller:</h3>
