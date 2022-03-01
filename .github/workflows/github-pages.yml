@@ -6,16 +6,22 @@ on:
       - jekyllBlog
 
 jobs:
-  github-pages:
+  build-deploy:
     runs-on: ubuntu-latest
+
     steps:
-    - uses: actions/checkout@v2
-    - uses: actions/cache@v2
-    with:
-      path: vendor/bundle
-      key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
-      restore-keys: |
-        ${{ runner.os }}-gems-
-    - uses: helaili/jekyll-action@v2
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Get cached gems
+        uses: actions/cache@v2
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-gems-
+
+      - name: Build and deploy
+        uses: helaili/jekyll-action@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
